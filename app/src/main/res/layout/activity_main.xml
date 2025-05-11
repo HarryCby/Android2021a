@@ -1,0 +1,295 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    tools:context=".MainActivity">
+
+    <!-- 垂直排列的主布局 -->
+    <LinearLayout
+        android:id="@+id/main_vertical_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <!-- 顶部标题 -->
+        <TextView
+            android:id="@+id/titleText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="32dp"
+            android:text="2021_A"
+            android:textSize="24sp"
+            android:textColor="@android:color/black"
+            android:textStyle="bold"/>
+        <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"> <!-- 确保垂直居中 -->
+            <!-- 蓝牙连接按钮 -->
+            <Button
+                android:id="@+id/btn_connect"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="连接蓝牙设备"
+                android:textAllCaps="false"
+                android:textColor="@android:color/white"
+                android:textSize="12sp"
+                />
+            <Button
+                android:id="@+id/btn_send"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="开始基础测量"
+                android:enabled="false"
+                android:textColor="@android:color/white"
+                android:textSize="12sp"/>
+            <Button
+                android:id="@+id/btn_send1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="开始提高测量"
+                android:enabled="false"
+                android:textColor="@android:color/white"
+                android:textSize="12sp"/>
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"> <!-- 确保垂直居中 -->
+
+            <TextView
+                android:id="@+id/Freq"
+                android:layout_width="0dp"
+                android:layout_height="44dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginTop="8dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:textColor="@android:color/black"
+                android:text="Freq" />
+
+            <TextView
+                android:id="@+id/THD"
+                android:layout_width="0dp"
+                android:layout_height="44dp"
+                android:layout_weight="1"
+                android:layout_gravity="center_vertical"
+                android:layout_marginTop="8dp"
+                android:gravity="center"
+                android:textColor="@android:color/black"
+                android:text="THD" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:orientation="horizontal"
+            android:gravity="center">
+
+            <TextView
+                android:id="@+id/text1"
+                android:layout_width="53dp"
+                android:layout_height="32dp"
+                android:gravity="center"
+                android:layout_margin="8dp"
+                android:text="基波："
+                android:textColor="@android:color/black"
+                android:textSize="10sp"
+                />
+
+            <TextView
+                android:id="@+id/text2"
+                android:layout_width="53dp"
+                android:layout_height="32dp"
+                android:gravity="center"
+                android:text="二次谐波："
+                android:textSize="10sp"
+                android:textColor="@android:color/black"
+                android:layout_margin="8dp"/>
+
+            <TextView
+                android:id="@+id/text3"
+                android:layout_width="53dp"
+                android:layout_height="32dp"
+                android:gravity="center"
+                android:text="三次谐波："
+                android:textSize="10sp"
+                android:textColor="@android:color/black"
+                android:layout_margin="8dp"/>
+
+            <TextView
+                android:id="@+id/text4"
+                android:layout_width="53dp"
+                android:layout_height="32dp"
+                android:gravity="center"
+                android:text="四次谐波："
+                android:textSize="10sp"
+                android:textColor="@android:color/black"
+                android:layout_margin="8dp"/>
+
+            <TextView
+                android:id="@+id/text5"
+                android:layout_width="53dp"
+                android:layout_height="32dp"
+                android:gravity="center"
+                android:text="五次谐波："
+                android:textSize="10sp"
+                android:textColor="@android:color/black"
+                android:layout_margin="8dp"/>
+        </LinearLayout>
+
+
+        <!-- 水平排列的5个TextView -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center">
+
+            <TextView
+                android:id="@+id/u1"
+                android:layout_width="60dp"
+                android:layout_height="32dp"
+                android:gravity="center"
+                android:layout_margin="8dp"
+                android:text="u1"
+                android:textColor="@android:color/black"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/u2"
+                android:layout_width="60dp"
+                android:layout_height="32dp"
+                android:gravity="center"
+                android:text="u2"
+                android:textSize="12sp"
+                android:textColor="@android:color/black"
+                android:layout_margin="8dp"/>
+
+            <TextView
+                android:id="@+id/u3"
+                android:layout_width="60dp"
+                android:layout_height="32dp"
+                android:gravity="center"
+                android:text="u3"
+                android:textSize="12sp"
+                android:textColor="@android:color/black"
+                android:layout_margin="8dp"/>
+
+            <TextView
+                android:id="@+id/u4"
+                android:layout_width="60dp"
+                android:layout_height="32dp"
+                android:gravity="center"
+                android:text="u4"
+                android:textSize="12sp"
+                android:textColor="@android:color/black"
+                android:layout_margin="8dp"/>
+
+            <TextView
+                android:id="@+id/u5"
+                android:layout_width="60dp"
+                android:layout_height="32dp"
+                android:gravity="center"
+                android:text="u5"
+                android:textSize="12sp"
+                android:textColor="@android:color/black"
+                android:layout_margin="8dp"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:orientation="horizontal"
+            android:gravity="center">
+
+            <TextView
+                android:id="@+id/p1"
+                android:layout_width="60dp"
+                android:layout_height="32dp"
+                android:gravity="center"
+                android:text="p1"
+                android:textSize="12sp"
+                android:textColor="@android:color/black"
+                android:layout_margin="8dp"/>
+
+            <TextView
+                android:id="@+id/p2"
+                android:layout_width="60dp"
+                android:layout_height="32dp"
+                android:gravity="center"
+                android:text="p2"
+                android:textSize="12sp"
+                android:textColor="@android:color/black"
+                android:layout_margin="8dp"/>
+
+            <TextView
+                android:id="@+id/p3"
+                android:layout_width="60dp"
+                android:layout_height="32dp"
+                android:gravity="center"
+                android:text="p3"
+                android:textSize="12sp"
+                android:textColor="@android:color/black"
+                android:layout_margin="8dp"/>
+
+            <TextView
+                android:id="@+id/p4"
+                android:layout_width="60dp"
+                android:layout_height="32dp"
+                android:gravity="center"
+                android:text="p4"
+                android:textSize="12sp"
+                android:textColor="@android:color/black"
+                android:layout_margin="8dp"/>
+
+            <TextView
+                android:id="@+id/p5"
+                android:layout_width="60dp"
+                android:layout_height="32dp"
+                android:gravity="center"
+                android:text="p5"
+                android:textSize="12sp"
+                android:textColor="@android:color/black"
+                android:layout_margin="8dp"/>
+        </LinearLayout>
+
+        <com.github.mikephil.charting.charts.LineChart
+            android:id="@+id/chart"
+            android:layout_width="match_parent"
+            android:layout_height="280dp"
+            app:layout_constraintBottom_toTopOf="@id/statusText"
+            app:layout_constraintTop_toBottomOf="@id/main_vertical_layout" />
+
+
+    </LinearLayout>
+    <!-- 状态显示文本 -->
+    <TextView
+        android:id="@+id/statusText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="等待连接..."
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:textColor="@android:color/black"
+        android:layout_marginBottom="48dp"/>
+</androidx.constraintlayout.widget.ConstraintLayout>
